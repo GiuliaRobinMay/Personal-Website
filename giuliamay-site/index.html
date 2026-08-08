@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Giulia May — Custom software for large communities</title>
-<meta name="description" content="Giulia May builds custom, interactive software straight into large online communities: daily menus, tests, roadmaps, courses, bots and dashboards.">
+<title>Giulia May — Vibe-coded software for large communities</title>
+<meta name="description" content="Giulia May builds custom software, AI systems, automations and MCP servers straight into large online communities. 25 years of application development, shipped in days.">
 <meta name="theme-color" content="#FAF8F4">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Giulia May — Custom software for large communities">
-<meta property="og:description" content="Giulia May builds custom, interactive software straight into large online communities: daily menus, tests, roadmaps, courses, bots and dashboards.">
+<meta property="og:title" content="Giulia May — Vibe-coded software for large communities">
+<meta property="og:description" content="Custom member experiences, AI systems, automations and MCP servers, built into the community you already run. In days, not quarters.">
 <meta property="og:image" content="assets/img/photo19.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/playfairdisplay-normal-900.woff2" crossorigin>
@@ -17,42 +17,49 @@
 <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
+<a class="skip" href="#top">Skip to content</a>
+
 <nav class="nav">
   <div class="in">
     <a class="brand" href="#top">Giulia <em>May</em></a>
-    <div class="nav-links">
+    <div class="nav-links" id="navLinks">
       <a href="#problem">The problem</a>
+      <a href="#believe">What I believe</a>
       <a href="#build">What I build</a>
       <a href="#work">Work</a>
       <a href="#plan">How it goes</a>
-      <a href="#fit">Is this you?</a>
+      <a href="#faq">Questions</a>
     </div>
-    <a class="btn btn-red" href="#close">Book a call <span class="fn">→ 01</span></a>
+    <a class="btn btn-red nav-cta" data-book href="#close">Book a build call <span class="fn">&rarr; 01</span></a>
+    <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navLinks">
+      <span class="bars"><span></span><span></span><span></span></span>
+      <em>Menu</em>
+    </button>
   </div>
 </nav>
 
 <!-- ══ 01 · HERO ══════════════════════════════════════════════════════════ -->
 <header class="hero" id="top">
   <div class="hero-l">
-    <span class="label">Custom software, built into your community</span>
-    <div class="ph" style="margin-block:var(--s3) var(--s4);">
-      <span class="ph-tag">Placeholder &middot; headline still to be decided</span>
-      <h1><span>I build custom</span><span>software inside</span><em>your community.</em></h1>
-    </div>
+    <span class="label">Custom software, AI systems &amp; automations &mdash; built into your community</span>
+    <h1><span>I build the thing</span><span>your platform</span><em>said was impossible.</em></h1>
     <p class="lead">
-      I build interactive experiences straight into the community you already run.
-      A daily menu. A test that knows who took it. A roadmap, a course, a bot, a dashboard.
-      So five thousand members each get something that feels made for them, and not one more feed to scroll.
+      Daily menus. Assessments that change what a member sees next. Roadmaps, courses, trained bots,
+      dashboards, automations, MCP servers, second brains. Real, working software, embedded where your
+      members already are &mdash; so five thousand people each get something that feels made for them.
     </p>
     <div class="hero-cta">
-      <a class="btn btn-red" href="#close">Book a build call <span class="fn">→ 01</span></a>
-      <a class="btn" href="#build">See it running <span class="fn">↓ 02</span></a>
+      <a class="btn btn-red" data-book href="#close">Book a build call <span class="fn">&rarr; 01</span></a>
+      <a class="btn" href="#build">Play with it first <span class="fn">&darr; 02</span></a>
     </div>
+    <p class="hero-note">
+      Everything on this page that looks like an app <b>is</b> an app. Nothing here is a screenshot.
+    </p>
   </div>
   <div class="hero-r">
     <div class="hero-photo">
       <img src="assets/img/photo19.jpg" alt="Giulia May at her laptop, laughing" fetchpriority="high" decoding="async">
-      <span class="hero-tag">25 years building software · hundreds of communities</span>
+      <span class="hero-tag">25 years building software &middot; hundreds of communities</span>
     </div>
   </div>
 </header>
@@ -62,7 +69,7 @@
   <div><b>25</b><span>years building apps</span></div>
   <div><b>300+</b><span>communities inside</span></div>
   <div><b>25,000+</b><span>members reached</span></div>
-  <div><b>5.0</b><span>top rated · 200 jobs</span></div>
+  <div><b>5.0</b><span>top rated &middot; 200 jobs</span></div>
 </section>
 
 <!-- ══ 03 · PROBLEM ═══════════════════════════════════════════════════════ -->
@@ -87,8 +94,8 @@
           <p>Every welcome, nudge and check-in runs through you by hand. That works at fifty members. It quietly breaks at five hundred.</p>
         </li>
         <li>
-          <h3 class="h3">The good stuff is buried</h3>
-          <p>Your course, your library, your rituals are all in there somewhere, under six months of posts nobody scrolls back through.</p>
+          <h3 class="h3">Your tools do not talk to each other</h3>
+          <p>The community, the email list, the course platform, the CRM, the calendar. Five systems, and you are the integration between them.</p>
         </li>
         <li>
           <h3 class="h3">Off-the-shelf stops where you get interesting</h3>
@@ -107,14 +114,32 @@
         <span class="stake-k" style="color:var(--gold);margin-top:8px;">What it looks like instead</span>
         <p>
           Members log in and the space knows them. Where they left off, what is on today, what comes next.
-          Engagement stops being something you push and starts being something the room does on its own.
+          Behind the glass, the systems talk to each other and the busywork runs itself.
         </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══ 04 · THE TURN / GUIDE ══════════════════════════════════════════════ -->
+<!-- ══ 04 · MANIFESTO ═════════════════════════════════════════════════════ -->
+<section class="sec sec-red" id="believe">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label">The flag I am planting</span>
+      <h2 class="h2">Six things I believe, and one of them is <em>heresy.</em></h2>
+    </div>
+    <ol class="creed">
+      <li><span class="creed-n">01</span><p><b>A feed is not a community.</b> It is a queue. Nobody ever belonged to a queue.</p></li>
+      <li><span class="creed-n">02</span><p><b>Software should know who just walked in.</b> If it treats the day-one member and the five-year veteran identically, it is not software, it is furniture.</p></li>
+      <li><span class="creed-n">03</span><p><b>A hundred people who would miss you beats a hundred thousand who would not.</b> Build for the smallest tribe that can sustain you, then build them something absurdly specific.</p></li>
+      <li><span class="creed-n">04</span><p><b>If you can describe it, it can be built.</b> Not next quarter. This week. That sentence was a lie for twenty-five years and it is true now.</p></li>
+      <li class="heresy"><span class="creed-n">05</span><p><b>Vibe coding is not a shortcut. It is a superpower &mdash; in trained hands.</b> This is the heresy. Half the industry says it makes fragile toys. They are right, if you have never shipped software. I have shipped it for twenty-five years. The AI changed my speed. It did not change my standards.</p></li>
+      <li><span class="creed-n">06</span><p><b>Custom should be the default, not the luxury.</b> The reason communities all feel the same is that building anything used to cost a quarter and a developer. That reason is gone.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ══ 05 · THE TURN / GUIDE ══════════════════════════════════════════════ -->
 <section class="sec">
   <div class="wrap">
     <div class="turn">
@@ -124,25 +149,31 @@
       </div>
       <div>
         <span class="label">Why me, and why now</span>
-        <h2 class="h2" style="margin-top:var(--s2);">I spent 25 years building custom applications. Then I spent ten building <em>communities.</em> Now I do both at once.</h2>
+        <h2 class="h2" style="margin-top:var(--s2);">25 years of building applications. 10 of building communities. The tools finally let me do <em>both at once.</em></h2>
         <p class="lead" style="margin-top:var(--s3);">
-          For most of my career I built software for companies: UX, human-centred design, real applications for real users.
-          Then I moved into community, and hundreds of tribes later I kept hitting the same wall. The thing the host
-          needed did not exist, and no platform was going to build it.
+          For most of my career I built custom applications for companies. UX, human-centred design,
+          real software for real users, with all the unglamorous parts: edge cases, accessibility, the
+          thing that happens when someone clicks the button twice.
         </p>
         <p class="lead" style="margin-top:var(--s2);">
-          That wall is gone. I can now design, build and ship a working, custom experience into your community
-          in days rather than quarters. Not a template with your logo on it. The actual thing you described
-          out loud and assumed was impossible.
+          Then I moved into community, and hundreds of tribes later I kept hitting the same wall.
+          The thing the host needed did not exist, and no platform was going to build it. I could design it,
+          I could even build it, but not at a price or a speed that made sense for a community.
+        </p>
+        <p class="lead" style="margin-top:var(--s2);">
+          That wall is gone. Vibe coding collapsed the distance between describing a thing and running it.
+          For someone who has never built software, that is a fast way to make something fragile.
+          For someone who spent twenty-five years learning what good looks like, it is the best tool
+          ever handed to me.
         </p>
         <div class="turn-then-now">
           <div class="tn">
             <span class="tn-k">What I used to sell</span>
-            <p>Strategy, structure, rituals, a plan you then had to build yourself.</p>
+            <p>Strategy, structure, rituals, growth plans. A brilliant document you then had to go and build yourself.</p>
           </div>
           <div class="tn now">
             <span class="tn-k">What I sell now</span>
-            <p>The same thinking, shipped as working software inside your community by the end of the week.</p>
+            <p>The same thinking, shipped as working software inside your community &mdash; with the automations, integrations and AI behind it &mdash; by the end of the week.</p>
           </div>
         </div>
       </div>
@@ -150,20 +181,22 @@
   </div>
 </section>
 
-<!-- ══ 05 · THE RACK (live demos) ═════════════════════════════════════════ -->
+<!-- ══ 06 · THE RACK (live demos) ═════════════════════════════════════════ -->
 <section class="sec sec-sky" id="build">
   <div class="wrap">
     <div class="sec-head">
       <span class="label">What gets built</span>
       <h2 class="h2">This page is the <em>demo.</em> Click anything. It all really works.</h2>
       <p class="lead">
-        Everything below is a live, working piece, running right here in your browser.
-        This is the kind of thing that ends up embedded in your community, in your colours, with your content.
+        Ten live, working pieces, running right here in your browser. Six your members would touch,
+        four that run behind the glass. This is the kind of thing that ends up embedded in your community,
+        in your colours, with your content.
       </p>
     </div>
 
     <div class="rack">
       <div class="rack-index" role="tablist" aria-label="Things I build">
+        <span class="rack-group">What members touch</span>
         <button role="tab" aria-selected="true" aria-controls="p-menu" id="t-menu">
           Daily menu<small>What is on today, for this member</small>
         </button>
@@ -182,13 +215,26 @@
         <button role="tab" aria-selected="false" aria-controls="p-bot" id="t-bot">
           Trained bot<small>Your books and courses, answering</small>
         </button>
+        <span class="rack-group">The engine behind it</span>
+        <button role="tab" aria-selected="false" aria-controls="p-auto" id="t-auto">
+          Automations<small>The busywork, running itself</small>
+        </button>
+        <button role="tab" aria-selected="false" aria-controls="p-mcp" id="t-mcp">
+          MCP servers<small>Give the AI real hands</small>
+        </button>
+        <button role="tab" aria-selected="false" aria-controls="p-brain" id="t-brain">
+          Second brain<small>Everything you know, searchable</small>
+        </button>
+        <button role="tab" aria-selected="false" aria-controls="p-int" id="t-int">
+          Integrations<small>Your five tools, finally talking</small>
+        </button>
       </div>
 
       <div class="rack-stage">
         <!-- daily menu -->
         <div class="rack-panel" data-open="true" id="p-menu" role="tabpanel" aria-labelledby="t-menu">
           <div class="screen">
-            <div class="screen-bar"><span class="dot"></span>Today in the community<span class="host">embedded · your community</span></div>
+            <div class="screen-bar"><span class="dot"></span>Today in the community<span class="host">embedded &middot; your community</span></div>
             <div class="screen-body">
               <div class="menu-head">
                 <div class="menu-day pf" id="menuDay">Today</div>
@@ -206,7 +252,7 @@
             <div class="screen-bar"><span class="dot"></span>What kind of host are you?<span class="host">3 questions</span></div>
             <div class="screen-body" id="quizBody"></div>
           </div>
-          <p class="rack-caption"><b>Why it matters.</b> A test is not a toy. It tags the member, and everything after it, the menu, the emails, the roadmap, changes to match.</p>
+          <p class="rack-caption"><b>Why it matters.</b> A test is not a toy. It tags the member, and everything after it &mdash; the menu, the emails, the roadmap &mdash; changes to match.</p>
         </div>
 
         <!-- roadmap -->
@@ -228,13 +274,13 @@
         <!-- course -->
         <div class="rack-panel" id="p-course" role="tabpanel" aria-labelledby="t-course">
           <div class="screen">
-            <div class="screen-bar"><span class="dot"></span>Module 1 · Building the room<span class="host">4 lessons</span></div>
+            <div class="screen-bar"><span class="dot"></span>Module 1 &middot; Building the room<span class="host">4 lessons</span></div>
             <div class="screen-body">
               <div class="les-prog"><b id="lesPct">0%</b><span id="lesCount">0 of 4 complete</span></div>
               <div id="lesList"></div>
             </div>
           </div>
-          <p class="rack-caption"><b>Why it matters.</b> Real video, real completion tracking, real unlocks. The course lives inside the community instead of on some other platform members forget to log into.</p>
+          <p class="rack-caption"><b>Why it matters.</b> Real video, real completion tracking, real unlocks &mdash; and I build the course itself with you, not just the shell it sits in.</p>
         </div>
 
         <!-- checklist -->
@@ -269,18 +315,73 @@
           </div>
           <p class="rack-caption"><b>Why it matters.</b> Trained on your books, your courses, your talks. It answers at 2am in your voice, so the same six questions stop landing in your inbox.</p>
         </div>
+
+        <!-- automations -->
+        <div class="rack-panel" id="p-auto" role="tabpanel" aria-labelledby="t-auto">
+          <div class="screen">
+            <div class="screen-bar"><span class="dot"></span>Automation &middot; new member joins<span class="host">press run</span></div>
+            <div class="screen-body">
+              <div class="flow" id="flowList"></div>
+              <div class="flow-foot">
+                <button class="flow-run" id="flowRun" type="button">Run it</button>
+                <span class="flow-stat" id="flowStat">Idle &mdash; this is what fires the moment someone joins.</span>
+              </div>
+            </div>
+          </div>
+          <p class="rack-caption"><b>Why it matters.</b> Every step here is one you currently do by hand, or do not do at all. It runs in four seconds, at 3am, for the five hundredth member, exactly as well as for the first.</p>
+        </div>
+
+        <!-- mcp -->
+        <div class="rack-panel" id="p-mcp" role="tabpanel" aria-labelledby="t-mcp">
+          <div class="screen">
+            <div class="screen-bar"><span class="dot"></span>Your community, as tools an AI can use<span class="host">watch the calls</span></div>
+            <div class="screen-body" style="display:flex;flex-direction:column;">
+              <div class="mcp-log" id="mcpLog"></div>
+              <div class="bot-chips" id="mcpChips"></div>
+            </div>
+          </div>
+          <p class="rack-caption"><b>Why it matters.</b> An MCP server turns your community into something an AI can actually operate &mdash; read the members, create the space, post the announcement. Not a chatbot that talks about your community. One with its hands on it.</p>
+        </div>
+
+        <!-- second brain -->
+        <div class="rack-panel" id="p-brain" role="tabpanel" aria-labelledby="t-brain">
+          <div class="screen">
+            <div class="screen-bar"><span class="dot"></span>Second brain<span class="host">everything you ever made</span></div>
+            <div class="screen-body">
+              <form class="brain-form" id="brainForm">
+                <label for="brainInput" style="position:absolute;left:-9999px;">Search your material</label>
+                <input id="brainInput" type="text" autocomplete="off" placeholder="Search 12 years of material...">
+                <button type="submit">Search</button>
+              </form>
+              <div class="bot-chips" id="brainChips"></div>
+              <div class="brain-out" id="brainOut"></div>
+            </div>
+          </div>
+          <p class="rack-caption"><b>Why it matters.</b> Twelve years of posts, calls, decks and voice notes stop being an archive nobody opens and start being a system that answers &mdash; with the source attached, so you can trust it.</p>
+        </div>
+
+        <!-- integrations -->
+        <div class="rack-panel" id="p-int" role="tabpanel" aria-labelledby="t-int">
+          <div class="screen">
+            <div class="screen-bar"><span class="dot"></span>Your stack<span class="host">click a tool</span></div>
+            <div class="screen-body">
+              <div class="int-grid" id="intGrid"></div>
+              <div class="int-detail" id="intDetail"></div>
+            </div>
+          </div>
+          <p class="rack-caption"><b>Why it matters.</b> Right now you are the integration. Every time something moves between two tools, it moves because you moved it. This is that job, given to software.</p>
+        </div>
       </div>
     </div>
 
     <p class="lead" style="margin-top:var(--s4);">
-      And it does not stop at six. Embedded video streams, member directories, dashboards, automations,
-      MCP servers, second brains, integrations between the tools you already pay for.
-      If you can describe it, it can be built.
+      And it does not stop at ten. Embedded video streams, member directories, live dashboards, event systems,
+      referral engines, admin panels, whole standalone apps. If you can describe it out loud, it can be built.
     </p>
   </div>
 </section>
 
-<!-- ══ 06 · WORK ══════════════════════════════════════════════════════════ -->
+<!-- ══ 07 · WORK ══════════════════════════════════════════════════════════ -->
 <section class="sec" id="work">
   <div class="wrap">
     <div class="sec-head">
@@ -290,8 +391,8 @@
     <div class="work">
       <div class="work-row">
         <h4>GOAT Academy</h4>
-        <p>A 26-lesson course viewer embedded inside Mighty Networks. Video that only marks a lesson complete when it actually finishes, module unlocks, a progress ring, private notes and three themes.</p>
-        <div class="work-tags"><span>Course app</span><span>Video</span><span>Embed</span></div>
+        <p>A 26-lesson course viewer embedded inside Mighty Networks. Video that only marks a lesson complete when it actually finishes, module unlocks, a progress ring, private notes and three themes. Plus an MCP server so the whole community can be run by an assistant.</p>
+        <div class="work-tags"><span>Course app</span><span>Video</span><span>MCP</span></div>
       </div>
       <div class="work-row">
         <h4>Lesko Help</h4>
@@ -337,7 +438,7 @@
   </div>
 </section>
 
-<!-- ══ 07 · PLAN ══════════════════════════════════════════════════════════ -->
+<!-- ══ 08 · PLAN ══════════════════════════════════════════════════════════ -->
 <section class="sec sec-ink" id="plan">
   <div class="wrap">
     <div class="sec-head">
@@ -361,14 +462,14 @@
       <div class="plan-step">
         <span class="plan-n">03</span>
         <h3>It goes live in your community</h3>
-        <p>Embedded where your members already are, in your colours. I stay on to tune it once real people start touching it.</p>
+        <p>Embedded where your members already are, in your colours, wired to the tools you already pay for. I stay on to tune it once real people start touching it.</p>
         <span class="when">Then we iterate</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══ 08 · FIT ═══════════════════════════════════════════════════════════ -->
+<!-- ══ 09 · FIT ═══════════════════════════════════════════════════════════ -->
 <section class="sec" id="fit">
   <div class="wrap">
     <div class="sec-head">
@@ -382,7 +483,7 @@
           <li><b>&rarr;</b> You already have a community. It exists, people are in it, and you want it to come alive.</li>
           <li><b>&rarr;</b> You keep describing a feature your platform does not have and being told it is not possible.</li>
           <li><b>&rarr;</b> You are the bottleneck. Everything personal in your community currently runs through your hands.</li>
-          <li><b>&rarr;</b> You have real material, a course, a book, a method, that is stuck in a folder instead of in front of members.</li>
+          <li><b>&rarr;</b> You have real material &mdash; a course, a book, a method &mdash; stuck in a folder instead of in front of members.</li>
           <li><b>&rarr;</b> You would rather look at a working version this week than a proposal next quarter.</li>
         </ul>
       </div>
@@ -399,7 +500,112 @@
   </div>
 </section>
 
-<!-- ══ 09 · CLOSE ═════════════════════════════════════════════════════════ -->
+<!-- ══ 10 · FAQ ═══════════════════════════════════════════════════════════ -->
+<section class="sec sec-sky" id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label">The things people actually ask</span>
+      <h2 class="h2">Including the awkward <em>one.</em></h2>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>Hold on. Is &ldquo;vibe coding&rdquo; not just AI writing sloppy code?</summary>
+        <div>
+          <p>
+            In untrained hands, yes, often. Someone who has never shipped software cannot tell the difference
+            between code that works and code that works <em>today</em>. They find out when it breaks in front of
+            five hundred members.
+          </p>
+          <p>
+            I spent twenty-five years as a custom application developer before any of this existed. I know what
+            accessibility means, what happens on a bad connection, what a data model should look like, and which
+            corners you are allowed to cut. The AI made me faster. It did not make me less careful. That is the
+            whole difference, and it is the reason this is worth paying for.
+          </p>
+        </div>
+      </details>
+      <details>
+        <summary>I am on Mighty Networks / Circle / Skool / Kajabi. Does this work there?</summary>
+        <div>
+          <p>
+            Yes. Everything I build is a real web application that gets embedded inside your community, so it
+            works anywhere you can place an embed &mdash; which is all of them. Your members never leave. It carries
+            your colours, your fonts and your language, so it does not read as a bolt-on.
+          </p>
+          <p>
+            Mighty Networks is where I have done the most of it, so if that is where you are, we skip a lot of
+            discovery.
+          </p>
+        </div>
+      </details>
+      <details>
+        <summary>How long does it actually take?</summary>
+        <div>
+          <p>
+            A single focused piece &mdash; a daily menu, an assessment, an onboarding flow &mdash; is days. Something with
+            several moving parts, accounts, automations and integrations behind it, is a few weeks. You see a
+            working version long before it is finished, which is the point: you react to the real thing instead
+            of approving a document.
+          </p>
+        </div>
+      </details>
+      <details>
+        <summary>What does it cost?</summary>
+        <div>
+          <p>
+            It is priced per build, not per hour, and you know the number before anything starts. Small,
+            self-contained pieces sit at one end; a full custom member experience with an engine behind it sits
+            at the other. The call is free and I will tell you honestly which end you are at &mdash; including if the
+            answer is &ldquo;a template already does this, save your money.&rdquo;
+          </p>
+        </div>
+      </details>
+      <details>
+        <summary>Who owns it? Am I locked in?</summary>
+        <div>
+          <p>
+            You own it. The code is yours, it runs on your hosting or mine as you prefer, and if you want to hand
+            it to another developer next year you can. I would rather earn the next project than trap you in
+            this one.
+          </p>
+        </div>
+      </details>
+      <details>
+        <summary>What happens when it breaks, or I want to change something?</summary>
+        <div>
+          <p>
+            Things get tuned after launch &mdash; that is normal and it is included for the first stretch after it goes
+            live. After that, most people keep me on a light retainer, because a community that is alive keeps
+            wanting new things. There is no obligation to.
+          </p>
+        </div>
+      </details>
+      <details>
+        <summary>Can you build the course itself, not just the software around it?</summary>
+        <div>
+          <p>
+            Yes, and it is some of my favourite work. Structure, sequence, what a lesson is allowed to ask of
+            someone, where people quit and how to stop them &mdash; that is community and instructional design, which is
+            the job I did before this one. Bring a method that lives in your head and we will build both the
+            course and the thing it runs in.
+          </p>
+        </div>
+      </details>
+      <details>
+        <summary>Do you only work with big communities?</summary>
+        <div>
+          <p>
+            Not only, but that is where this pays for itself fastest. Below a hundred members you can still be
+            the personalisation yourself. Somewhere past a few hundred, doing it by hand stops working, and that
+            is exactly the point where custom software becomes cheaper than your own time.
+          </p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 11 · CLOSE ═════════════════════════════════════════════════════════ -->
 <section class="sec sec-ink" id="close">
   <div class="wrap">
     <div class="close-grid">
@@ -411,8 +617,8 @@
           You will leave knowing whether it can be built, roughly what it costs, and what I would ship first.
         </p>
         <div class="close-cta">
-          <a class="btn btn-red" href="#">Book a build call <span class="fn">→ 01</span></a>
-          <a class="btn btn-paper" href="#news">Not ready? Take the newsletter <span class="fn">↓ 02</span></a>
+          <a class="btn btn-red" data-book href="#">Book a build call <span class="fn">&rarr; 01</span></a>
+          <a class="btn btn-paper" href="#news">Not ready? Take the newsletter <span class="fn">&darr; 02</span></a>
         </div>
       </div>
       <div class="close-note">
@@ -438,7 +644,7 @@
         <div class="fname">Giulia May</div>
         <div class="foot-bio">
           <span class="pic"><img src="assets/img/photo24.jpg" alt="Giulia May" loading="lazy" decoding="async"></span>
-          <p>Custom software for large communities. 25 years of application building, pointed at the room you already run.</p>
+          <p>Vibe-coded software, AI systems and automations for large communities. 25 years of application building, pointed at the room you already run.</p>
         </div>
       </div>
       <div>
