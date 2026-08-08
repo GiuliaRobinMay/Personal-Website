@@ -20,7 +20,6 @@ vibe coding in untrained hands makes fragile toys — the 25 years is the whole 
 ## Run it locally
 
 ```bash
-cd giuliamay-site
 python3 -m http.server 8000
 # open http://localhost:8000
 ```
@@ -29,37 +28,38 @@ Opening `index.html` straight off disk also works, but a local server is closer 
 
 ## Deploy
 
-**Cloudflare Pages** — connect the repo, then:
+`index.html` sits at the repository root on purpose. Every static host looks there
+by default, so there is nothing to configure on any of them — leave every build
+setting empty and it works. Do not move the site back into a subfolder: that is
+what produced a `404: NOT_FOUND` on Vercel before.
 
-| Setting | Value |
-| --- | --- |
-| Framework preset | None |
-| Build command | *(leave empty)* |
-| Build output directory | `giuliamay-site` |
+| Host | Framework preset | Build command | Output directory |
+| --- | --- | --- | --- |
+| Vercel | Other | *(empty)* | *(empty)* |
+| Cloudflare Pages | None | *(empty)* | *(empty)* |
+| GitHub Pages | — | — | serve from root |
 
-**Vercel** — connect the repo, then:
-
-| Setting | Value |
-| --- | --- |
-| Framework preset | Other |
-| Root directory | `giuliamay-site` |
-| Build command | *(leave empty)* |
-| Output directory | *(leave empty)* |
-
-Both serve it as static files. Point `giuliamay.com` at whichever one you pick,
-and only then take the Squarespace site down.
+Point `giuliamay.com` at whichever one you pick, and only then take the
+Squarespace site down.
 
 ## Layout
 
 ```
-giuliamay-site/
-  index.html              the whole page
-  favicon.svg
-  assets/css/site.css     tokens at the top, then sections in page order
-  assets/js/site.js       the six live demos, one block each
-  assets/fonts/           Playfair Display, DM Sans, Brittany Signature (self-hosted)
-  assets/img/             brand-shoot photos, resized for the web
+index.html              the whole page
+favicon.svg
+assets/css/site.css     tokens at the top, then sections in page order
+assets/js/site.js       the ten live demos, one block each
+assets/fonts/           Playfair Display, DM Sans, Brittany Signature (self-hosted)
+assets/img/             brand-shoot photos, resized for the web
 ```
+
+## Keep this repository private
+
+`assets/fonts/brittanysignature.*` is a **commercial** font. Publishing this
+repository publicly redistributes that file, which its licence almost certainly
+forbids. Playfair Display and DM Sans are open licence and fine either way.
+Vercel and Cloudflare Pages both deploy from private repositories, so there is no
+reason to make it public.
 
 Fonts are **self-hosted on purpose**. No Google Fonts request, so the page has no
 third-party dependency and nothing to disclose in a cookie banner.
