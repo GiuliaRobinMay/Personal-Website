@@ -1,21 +1,7 @@
 # Giulia May — website (2026 rebuild)
 
-A one-page site for the positioning: **vibe-coded custom software, AI systems, automations
-and MCP servers, built into large communities.**
+A one-page site for the new positioning: **custom software built into large communities.**
 Plain HTML, CSS and JavaScript. No build step, no framework, no dependencies.
-
-## The argument the page makes
-
-Three frameworks, stacked, in this order:
-
-| Layer | Where it shows up |
-| --- | --- |
-| **StoryBrand** (Donald Miller) | The client is the hero, not Giulia. Problem → guide → plan → call to action → stakes → success. Sections 03, 05, 08, 11. |
-| **Wes McDowell** | Clarity over cleverness in the hero, one repeated primary CTA, a transitional CTA (newsletter) for people not ready, and an FAQ that answers objections instead of hiding them. |
-| **Seth Godin** (*Tribes*, *Purple Cow*) | Section 04, the manifesto. A flag to stand under, a named heresy, and the smallest-viable-tribe argument. This is what makes the site remarkable rather than merely clear. |
-
-The heresy is stated out loud in creed 05 and answered head-on as the first FAQ:
-vibe coding in untrained hands makes fragile toys — the 25 years is the whole point.
 
 ## Run it locally
 
@@ -28,38 +14,36 @@ Opening `index.html` straight off disk also works, but a local server is closer 
 
 ## Deploy
 
-`index.html` sits at the repository root on purpose. Every static host looks there
-by default, so there is nothing to configure on any of them — leave every build
-setting empty and it works. Do not move the site back into a subfolder: that is
-what produced a `404: NOT_FOUND` on Vercel before.
+**Cloudflare Pages** — connect the repo, then:
 
-| Host | Framework preset | Build command | Output directory |
-| --- | --- | --- | --- |
-| Vercel | Other | *(empty)* | *(empty)* |
-| Cloudflare Pages | None | *(empty)* | *(empty)* |
-| GitHub Pages | — | — | serve from root |
+| Setting | Value |
+| --- | --- |
+| Framework preset | None |
+| Build command | *(leave empty)* |
+| Build output directory | *(leave empty — files are at the repo root)* |
 
-Point `giuliamay.com` at whichever one you pick, and only then take the
-Squarespace site down.
+**Vercel** — connect the repo, then:
+
+| Setting | Value |
+| --- | --- |
+| Framework preset | Other |
+| Root directory | *(leave empty — files are at the repo root)* |
+| Build command | *(leave empty)* |
+| Output directory | *(leave empty)* |
+
+Both serve it as static files. Point `giuliamay.com` at whichever one you pick,
+and only then take the Squarespace site down.
 
 ## Layout
 
 ```
 index.html              the whole page
-favicon.svg
-assets/css/site.css     tokens at the top, then sections in page order
-assets/js/site.js       the ten live demos, one block each
-assets/fonts/           Playfair Display, DM Sans, Brittany Signature (self-hosted)
-assets/img/             brand-shoot photos, resized for the web
+  favicon.svg
+  assets/css/site.css     tokens at the top, then sections in page order
+  assets/js/site.js       the six live demos, one block each
+  assets/fonts/           Playfair Display, DM Sans, Brittany Signature (self-hosted)
+  assets/img/             brand-shoot photos, resized for the web
 ```
-
-## Keep this repository private
-
-`assets/fonts/brittanysignature.*` is a **commercial** font. Publishing this
-repository publicly redistributes that file, which its licence almost certainly
-forbids. Playfair Display and DM Sans are open licence and fine either way.
-Vercel and Cloudflare Pages both deploy from private repositories, so there is no
-reason to make it public.
 
 Fonts are **self-hosted on purpose**. No Google Fonts request, so the page has no
 third-party dependency and nothing to disclose in a cookie banner.
@@ -95,10 +79,8 @@ and buttons as a rectangle with an uppercase DM Sans label plus an arrow-number 
 
 ## The live demos
 
-Ten working pieces in `site.js`, each independent, in two groups. They are the argument
-the page makes: it does not describe custom member experiences, it runs ten of them.
-
-**What members touch**
+Six working pieces in `site.js`, each independent. They are the argument the page makes:
+it does not describe custom member experiences, it runs six of them.
 
 | Demo | What it does |
 | --- | --- |
@@ -109,37 +91,21 @@ the page makes: it does not describe custom member experiences, it runs ten of t
 | Checklist | Ticking fills the bar, finishing reveals the closing note |
 | Bot | Keyword-matched answers over a small scripted corpus |
 
-**The engine behind it**
-
-| Demo | What it does |
-| --- | --- |
-| Automations | Press run, the six-step pipeline executes on a timer, step by step |
-| MCP servers | Pick a question, watch the tool calls fire before the answer lands |
-| Second brain | Search a small corpus, get an answer with its sources attached |
-| Integrations | Click a tool, see what flows in and out of it |
-
-To swap a demo's content, edit the array at the top of its block (`FLOW`, `MCP`, `BRAIN`,
-`TOOLS`, and so on). The rendering below it does not need to change.
-
-Anyone with `prefers-reduced-motion` set gets the timed demos instantly rather than
-stepped — see the `CALM` / `after()` helper at the top of `site.js`.
+To swap a demo's content, edit the array at the top of its block. The rendering below it
+does not need to change.
 
 ## Still open
 
 Anything undecided is wrapped in `class="ph"` and carries a rose `.ph-tag` label, so it
-cannot be mistaken for a finished choice. One is live right now:
+cannot be mistaken for a finished choice. Two are live right now:
 
-1. **Testimonials.** Three empty cards waiting for real quotes. These matter more than
-   anything else left on this list — the page currently asserts the track record and
-   never has a client confirm it.
+1. **The headline.** Currently a plain holding line. Not the answer.
+2. **Testimonials.** Three empty cards waiting for real quotes.
 
 To ship an item: delete its `.ph-tag` element and drop the `ph` class from its wrapper.
 
 Other things to wire before launch:
 
-- The **booking link**. Every button that should open the calendar is marked `data-book`,
-  so `grep data-book index.html` finds all of them. Three today: nav, hero, close.
+- The **Book a build call** buttons point at `#`. Give them a real booking link.
 - The **newsletter form** is not connected. It shows a notice saying so.
 - Footer links to Big Tribe Builders, QuinB Academy and socials are placeholders.
-- The **proof strip numbers** (25 / 300+ / 25,000+ / 5.0) carried over from the previous
-  draft. Confirm they are still the ones you want to stand behind.
