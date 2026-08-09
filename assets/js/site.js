@@ -6,6 +6,24 @@
   var CALM = window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches;
   function after(ms, fn){ return setTimeout(fn, CALM ? 0 : ms); }
 
+  /* ── scroll reveal ────────────────────────────────────────────────────────
+     The .js class is what arms the hidden state in CSS, so if this script
+     never runs the page still renders fully rather than blank.              */
+  document.documentElement.classList.add('js');
+  var reveals = document.querySelectorAll('.reveal');
+  if(CALM || !('IntersectionObserver' in window)){
+    Array.prototype.forEach.call(reveals, function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(!e.isIntersecting) return;
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      });
+    }, {rootMargin:'0px 0px -12% 0px'});
+    Array.prototype.forEach.call(reveals, function(el){ io.observe(el); });
+  }
+
   /* ── mobile nav ───────────────────────────────────────────────────────── */
   var navToggle = document.getElementById('navToggle');
   var navLinks  = document.getElementById('navLinks');
